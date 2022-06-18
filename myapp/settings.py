@@ -156,7 +156,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Foreldrajafnrétti",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "channels4_profile.max-165x165.png",
+    "site_logo": "AdminLTELogo.png",
 
     # CSS classes that are applied to the logo above
 
@@ -164,7 +164,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Velkominn til Foreldrajafnrétti ",
+    "welcome_sign": "Welcome to the Foreldrajafnrétti ",
 
     # Copyright on the footer
     "copyright": "Foreldrajafnrétti",
@@ -260,21 +260,4 @@ JAZZMIN_SETTINGS = {
     # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
 
-
-    ###############
-    # Change view #
-    ###############
-    # Render out the change view as a single form, or in tabs, current options are
-    # - single
-    # - horizontal_tabs (default)
-    # - vertical_tabs
-    # - collapsible
-    # - carousel
-   
-   
-    "changeform_format": "horizontal_tabs",
-    # override change forms on a per modeladmin basis
-    # "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
-    # Add a language dropdown into the admin
-    # "language_chooser": True,
 }

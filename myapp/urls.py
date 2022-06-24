@@ -29,7 +29,7 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='myblog/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='myblog/logout.html'), name='logout'),
     path('', include('myblog.urls')),
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('froala_editor/', include('froala_editor.urls'))
 ]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 

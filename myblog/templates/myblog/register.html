@@ -1,9 +1,6 @@
-{#{% extends "myblog/baseLogin.html" %}#}
-{#{% load crispy_forms_tags %}#}
-
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{#{% block title %} ABOUT {% endblock title %}#}
+{#{% block title %} Register {% endblock title %}#}
 {% load static %}
 {% block body %}
 
@@ -25,7 +22,7 @@
                 {% csrf_token %}
                 <div class="form-floating mb-3">
                  <fieldset class="form-group">
-                  <legend class="border-bottom mb-4">Join Today</legend>
+                  <legend class="border-bottom mb-4">Join us today</legend>
                       {{ form|crispy }}
                 </fieldset>
                 </div>
@@ -33,7 +30,7 @@
                 <div class="d-grid">
                   <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign Up</button>
                   <div class="text-center">
-                    <small class="text-muted">Already Have An Account?  <a class="ml-2" href="{% url 'login' %}">Sign In</a></small>
+                    <small class="text-muted">Already have an account?  <a class="ml-2" href="{% url 'login' %}">Please sign In</a></small>
                   </div>
                 </div>
 
@@ -45,4 +42,5 @@
     </div>
   </div>
 </div>
-{% endblock %}{% endblock %}
+{% endblock content %}
+{% endblock body%}

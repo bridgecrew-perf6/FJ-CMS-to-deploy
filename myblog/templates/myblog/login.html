@@ -1,0 +1,49 @@
+{#{% extends "myblog/baseLogin.html" %}#}
+{#{% load crispy_forms_tags %}#}
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{#{% block title %} ABOUT {% endblock title %}#}
+{% load static %}
+{% block body %}
+
+{% block content %}
+           <div class="container py-md-3 ">
+
+{#<div class="container-fluid ps-md-0">#}
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Welcome back!</h3>
+
+              <!-- Sign In Form -->
+              <form  method="POST">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                 <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">Login In</legend>
+                      {{ form|crispy }}
+                </fieldset>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Login</button>
+                  <div class="text-center">
+                    <small class="text-muted">Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a></small>
+                     <small class="border-bottom mb-4"><a class="ml-2" href="{% url 'home' %}">Visit our website</a></small>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}{% endblock %}

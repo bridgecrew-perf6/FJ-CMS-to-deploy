@@ -1,0 +1,728 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% load static %}
+{% block body %}
+
+      <!--- header close-->
+          <section>
+            <article>
+        <div class="container text-start">
+            <h1></h1>
+            <h1></h1>
+          </div>
+        </article>
+      </section>
+{#      <section class="Hero">#}
+{#        <div class="swiper hero_swiper">#}
+{#          <div class="swiper-wrapper">#}
+{#            {% for i in home_post %}#}
+{#            <div class="swiper-slide">#}
+{#              <article>#}
+{#                <img#}
+{#                  class="background"#}
+{#                  src="/media/{{i.fetured_image}}"#}
+{#                  alt=""#}
+{#                />#}
+{##}
+{#                <div class="container">#}
+{#                  <div class="d-inline-block">#}
+{#                    <div class="d-inline-block mx-2 link"><i class="fa-solid fa-user"></i>#}
+{#                      <span class="ms-2 italic">{{i.author}}</span>#}
+{#                    </div>#}
+{##}
+{#                    <div class="d-inline-block mx-2 link">#}
+{#                      <i class="fa-solid fa-calendar-days"></i>#}
+{#                      <span class="ms-2 italic">{{i.date}}</span>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <h1>{{i.title}}</h1>#}
+{#                  <p>#}
+{##}
+{#                  </p>#}
+{#                  <button class="bg-accent btn_bg">#}
+{#                    <div class="btn_bg-anim">#}
+{#                      <span><a href = "{{i.slug}}">READ MORE </a></span>#}
+{#                      <svg#}
+{#                        xmlns="http://www.w3.org/2000/svg"#}
+{#                        viewBox="0 0 24 24"#}
+{#                      >#}
+{#                        <path#}
+{#                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                        />#}
+{#                      </svg>#}
+{#                      <svg#}
+{#                        xmlns="http://www.w3.org/2000/svg"#}
+{#                        viewBox="0 0 24 24"#}
+{#                      >#}
+{#                        <path#}
+{#                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                        />#}
+{#                      </svg>#}
+{#                    </div>#}
+{#                  </button>#}
+{#                </div>#}
+{#              </article>#}
+{#            </div>#}
+{#            {%endfor%}#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#          </div>#}
+{#        </div>#}
+{##}
+{#        <div class="prev_btn">#}
+{#          <svg class="position-absolute h-100 w-100">#}
+{#            <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />#}
+{#            <image#}
+{#              href="/media/assets/images/btn_bg_hover.svg"#}
+{#              height="48"#}
+{#              width="72"#}
+{#            />#}
+{#          </svg>#}
+{#          <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">#}
+{#            <path#}
+{#              d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"#}
+{#            />#}
+{#          </svg>#}
+{#        </div>#}
+{#        <div class="next_btn">#}
+{#          <svg class="position-absolute h-100 w-100">#}
+{#            <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />#}
+{#            <image#}
+{#              href="/media/assets/images/btn_bg_hover.svg"#}
+{#              height="48"#}
+{#              width="72"#}
+{#            />#}
+{#          </svg>#}
+{#          <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">#}
+{#            <path#}
+{#              d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"#}
+{#            />#}
+{#          </svg>#}
+{#        </div>#}
+{#        <div class="bottom">#}
+{#          <img src="/media/assets/images/h1-rev-bottom.png" alt="" />#}
+{#        </div>#}
+{#      </section>#}
+
+{#      <section class="Tips">#}
+{#        <div class="container text-center">#}
+{#          <span class="italic">Lorem, ipsum dolor.</span>#}
+{#          <h2>TRAVEL ESSENTIALS <span class="spl">TIPS</span></h2>#}
+{#        </div>#}
+{#        <div class="container py-5">#}
+{#           <article class="row">#}
+{#            {% for i in upcoming_post %}#}
+{#            <div class="col-lg">#}
+{#              <img src="/media/{{i.fetured_image}}" alt="" style=" aspect-ratio: 16/8; object-fit: cover; "/>#}
+{##}
+{#              <div class="overlay">#}
+{#                <span class="svg_bg active">#}
+{#                  <div class="svg_bg-anim">#}
+{#                    <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                      <polygon#}
+{#                        class="st0"#}
+{#                        points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                         3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                      ></polygon>#}
+{#                    </svg>#}
+{#                    <span class="span"></span>#}
+{#                    <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                      <polygon#}
+{#                        class="st0"#}
+{#                        points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                         10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                         10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                         9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                      ></polygon>#}
+{#                    </svg>#}
+{#                  </div>#}
+{#                  <span class="italic">{{i.category}}</span>#}
+{#                </span>#}
+{#              </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg p-4">#}
+{#              <div class="d-inline-block">#}
+{#                <div class="d-inline-block mx-2 link">#}
+{#                  <i class="fa-solid fa-user"></i>#}
+{#                  <span class="ms-2 fs-5 italic">by {{i.author}}</span>#}
+{#                </div>#}
+{##}
+{#                <div class="d-inline-block mx-2 link">#}
+{#                  <i class="fa-solid fa-calendar-days"></i>#}
+{#                  <span class="ms-2 fs-5 italic">{{i.date}}</span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <h5>#}
+{#                <a class="link" href="#"#}
+{#                  >{{i.title |safe|truncatewords:"65"}}</a#}
+{#                >#}
+{#              </h5>#}
+{#              <p>#}
+{#                {{i.content|safe|truncatewords:"55" }}#}
+{#              </p>#}
+{#              <button class="bg-normal btn_bg">#}
+{#                <div class="btn_bg-anim">#}
+{#                  <span><a href = "{{i.slug}}">READ MORE </a></span>#}
+{#                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                    <path#}
+{#                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                    />#}
+{#                  </svg>#}
+{#                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                    <path#}
+{#                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                    />#}
+{#                  </svg>#}
+{#                </div>#}
+{#              </button>#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#          </article>#}
+{##}
+{#          <article class="row">#}
+{#            {% for i in Popular_post|slice:"0:1" %}#}
+{#            <div class="col-lg p-4">#}
+{#              <div class="d-inline-block">#}
+{#                <div class="d-inline-block mx-2 link">#}
+{#                  <i class="fa-solid fa-user"></i>#}
+{#                  <span class="ms-2 fs-5 italic">{{i.author}}</span>#}
+{#                </div>#}
+{##}
+{#                <div class="d-inline-block mx-2 link">#}
+{#                  <i class="fa-solid fa-calendar-days"></i>#}
+{#                  <span class="ms-2 fs-5 italic">{{i.date}}</span>#}
+{#                </div>#}
+{#              </div>#}
+{#              <h5>#}
+{#                <a class="link" href="{{i.slug}}"#}
+{#                >{{i.title |safe|truncatewords:"65"}}</a#}
+{#              >#}
+{#              </h5>#}
+{#              <p>#}
+{#               {{i.content|safe|truncatewords:"55" }}#}
+{#              </p>#}
+{#              <button class="bg-normal btn_bg">#}
+{#                <div class="btn_bg-anim">#}
+{#                  <span><a href = "{{i.slug}}">READ MORE </a></span>#}
+{#                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                    <path#}
+{#                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                    />#}
+{#                  </svg>#}
+{#                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                    <path#}
+{#                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                    />#}
+{#                  </svg>#}
+{#                </div>#}
+{#              </button>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg">#}
+{#              <img src="/media/{{i.fetured_image}}" alt="" style=" aspect-ratio: 16/8; object-fit: cover; "/>#}
+{##}
+{#              <div class="overlay">#}
+{#                <span class="svg_bg active">#}
+{#                  <div class="svg_bg-anim">#}
+{#                    <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                      <polygon#}
+{#                        class="st0"#}
+{#                        points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                         3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                      ></polygon>#}
+{#                    </svg>#}
+{#                    <span class="span"></span>#}
+{#                    <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                      <polygon#}
+{#                        class="st0"#}
+{#                        points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                         10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                         10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                         9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                      ></polygon>#}
+{#                    </svg>#}
+{#                  </div>#}
+{#                  <span class="italic">{{i.category}}</span>#}
+{#                </span>#}
+{#              </div>#}
+{#            </div>#}
+{#            {%endfor%}#}
+{#          </article>#}
+{#        </div>#}
+{#      </section>#}
+
+{#    Might be good to change it to register#}
+
+{#      <section class="Signup">#}
+{#        <div class="container">#}
+{#          <div class="row">#}
+{#            <div class="col-lg">#}
+{#              <img src="/media/assets/images/h1-img-01.png" alt="" />#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg">#}
+{#              <span class="italic">Lorem, ipsum dolor.</span>#}
+{#              <h3>#}
+{#                FINDING THE PERFECT TRAILS TO HIKE IS EARY WITH#}
+{#                <span class="spl">NEWSLETTER</span>#}
+{#              </h3>#}
+{#              <p>#}
+{#                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,#}
+{#                asperiores voluptate, necessitatibus temporibus adipisci aliquid#}
+{#                blanditiis vitae eligendi accusamus, pariatur laborum non#}
+{#                repellat architecto voluptatem.#}
+{#              </p>#}
+{#              <form class="d-inline-block" action="/News" method="post">#}
+{#                {% csrf_token %}#}
+{#                <input type="text" name="fullname " placeholder="Name" />#}
+{#                <input type="email" name="email" email="email" placeholder="E-mail" />#}
+{#                <button class="bg-accent btn_bg" type="submit" name="submit-form">#}
+{#                  <div class="btn_bg-anim">#}
+{#                    <span>SUBSCRIBE</span>#}
+{#                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                      <path#}
+{#                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                      />#}
+{#                    </svg>#}
+{#                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">#}
+{#                      <path#}
+{#                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"#}
+{#                      />#}
+{#                    </svg>#}
+{#                  </div>#}
+{#                </button>#}
+{#                {% for message in messages %}#}
+{#                <div class="alert alert-{{ message.tags }}" role="alert">#}
+{#                  <strong>Message :</strong> {{ message }}#}
+{#                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{#              </form>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </section>#}
+
+      <section class="Blogs">
+        <div class="container text-center">
+{#          <span class="italic"> </span>#}
+{#          <span class="italic"> </span>#}
+{#          <span class="italic"> </span>#}
+{#          <span class="italic"> </span>#}
+{#          <span class="italic"> </span>#}
+          <h2>Nýjast <span class="spl">posts</span></h2>
+        </div>
+
+       <div class="container py-5">
+          <div class="swiper blog_swiper">
+            <div class="swiper-wrapper">
+              {% for i in  Recent_post|slice:"0:10"%}
+              <div class="swiper-slide">
+                <article>
+                  <div class="poster position-relative">
+                    <img src="/media/{{i.fetured_image}}" alt="" style=" aspect-ratio: 16/16; object-fit: cover; " />
+                    <div class="overlay">
+                      <span class="svg_bg active">
+                        <div class="svg_bg-anim">
+                          <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                            <polygon
+                              class="st0"
+                              points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                               3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                            ></polygon>
+                          </svg>
+                          <span class="span"></span>
+                          <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                            <polygon
+                              class="st0"
+                              points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                               10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                               10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                               9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                            ></polygon>
+                          </svg>
+                        </div>
+                        <span class="italic">{{i.category}} </span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="py-3">
+                    <div class="d-inline-block">
+                      <div class="d-inline-block mx-2 link">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="ms-2 fs-5 italic">{{i.author}}</span>
+                      </div>
+
+                      <div class="d-inline-block mx-2 link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="ms-2 fs-5 italic">{{i.date}}</span>
+                      </div>
+                    </div>
+                    <h5>
+                      <a href="{{i.slug}}" class="link">
+                        {{i.title|safe|truncatewords:"25"}}
+                       </a>
+                    </h5>
+                  </div>
+                </article>
+              </div>
+              {%endfor%}
+
+
+
+
+            </div>
+          </div>
+          <div class="prev_btn">
+            <svg class="position-absolute h-100 w-100">
+              <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />
+              <image
+                href="/media/assets/images/btn_bg_hover.svg"
+                height="48"
+                width="72"
+              />
+            </svg>
+            <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path
+                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
+              />
+            </svg>
+          </div>
+          <div class="next_btn">
+            <svg class="position-absolute h-100 w-100">
+              <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />
+              <image
+                href="/media/assets/images/btn_bg_hover.svg"
+                height="48"
+                width="72"
+              />
+            </svg>
+            <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path
+                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+{#      <section class="Destinations">#}
+{#        <div class="container">#}
+{#          <div class="swiper destination_swiper">#}
+{#            <div class="swiper-wrapper">#}
+{#              {% for i in Popular_post|slice:"0:5" %}#}
+{#              <div class="swiper-slide">#}
+{#                <article>#}
+{#                  <img src="/media/{{i.fetured_image}}" alt="" style=" aspect-ratio: 16/8; object-fit: cover; "/>#}
+{#                  <div class="overlay">#}
+{#                    <span class="svg_bg active">#}
+{#                      <div class="svg_bg-anim">#}
+{#                        <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                          <polygon#}
+{#                            class="st0"#}
+{#                            points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                             3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                          ></polygon>#}
+{#                        </svg>#}
+{#                        <span class="span"></span>#}
+{#                        <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                          <polygon#}
+{#                            class="st0"#}
+{#                            points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                             10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                             10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                             9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                          ></polygon>#}
+{#                        </svg>#}
+{#                      </div>#}
+{#                      <div class="box">#}
+{#                        <span class="italic">{{i.category}}</span>#}
+{#                        <h4>{{i.title|truncatewords:"40"}}</h4>#}
+{#                        <p align="center">#}
+{#                          {{i.content|safe|truncatewords:"20" }}#}
+{#                        </p>#}
+{#                        <button class="bg-normal btn_bg">#}
+{#                          <div class="btn_bg-anim">#}
+{##}
+{##}
+{#                          </div>#}
+{#                        </button>#}
+{#                      </div>#}
+{#                    </span>#}
+{#                  </div>#}
+{#                </article>#}
+{#              </div>#}
+{#              {%endfor%}#}
+{#              </div>#}
+{#              </div>#}
+{#          <div class="prev_btn">#}
+{#            <svg class="position-absolute h-100 w-100">#}
+{#              <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />#}
+{#              <image#}
+{#                href="/media/assets/images/btn_bg_hover.svg"#}
+{#                height="48"#}
+{#                width="72"#}
+{#              />#}
+{#            </svg>#}
+{#            <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">#}
+{#              <path#}
+{#                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"#}
+{#              />#}
+{#            </svg>#}
+{#          </div>#}
+{#          <div class="next_btn">#}
+{#            <svg class="position-absolute h-100 w-100">#}
+{#              <image href="/media/assets/images/btn_bg.svg" height="48" width="72" />#}
+{#              <image#}
+{#                href="/media/assets/images/btn_bg_hover.svg"#}
+{#                height="48"#}
+{#                width="72"#}
+{#              />#}
+{#            </svg>#}
+{#            <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">#}
+{#              <path#}
+{#                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"#}
+{#              />#}
+{#            </svg>#}
+{#          </div>#}
+{#        </div>#}
+{#      </section>#}
+
+{#      <section class="Destinations_fill">#}
+{#        <div class="container"></div>#}
+{#      </section>#}
+{##}
+{#      <section class="Destinations_main">#}
+{#        <div class="container">#}
+{#          <div class="top row pb-5">#}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-07.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-13.png" alt="" />#}
+{#              <span>1 destinations</span>#}
+{#              <h6>ADVENTURE</h6>#}
+{#            </div>#}
+{##}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-08.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-14.png" alt="" />#}
+{#              <span>3 destinations</span>#}
+{#              <h6>BEACHES</h6>#}
+{#            </div>#}
+{##}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-09.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-15.png" alt="" />#}
+{#              <span>2 destinations</span>#}
+{#              <h6>CAMPING</h6>#}
+{#            </div>#}
+{##}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-10.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-16.png" alt="" />#}
+{#              <span>1 destinations</span>#}
+{#              <h6>FRIENDLY</h6>#}
+{#            </div>#}
+{##}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-11.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-17.png" alt="" />#}
+{#              <span>9 destinations</span>#}
+{#              <h6>LOW BUDGET</h6>#}
+{#            </div>#}
+{##}
+{#            <div class="col">#}
+{#              <span class="svg_bg">#}
+{#                <div class="svg_bg-anim">#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 14.1 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8#}
+{#                       3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                  <span class="span"></span>#}
+{#                  <svg x="0px" y="0px" viewBox="0 0 11.5 28">#}
+{#                    <polygon#}
+{#                      class="st0"#}
+{#                      points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8#}
+{#                       10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9#}
+{#                       10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2#}
+{#                       9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "#}
+{#                    ></polygon>#}
+{#                  </svg>#}
+{#                </div>#}
+{#                <span class="italic">&nbsp;</span>#}
+{#              </span>#}
+{#              <img src="/media/assets/images/h1-img-12.png" alt="" />#}
+{#              <img src="/media/assets/images/h1-img-18.png" alt="" />#}
+{#              <span>4 destinations</span>#}
+{#              <h6>POPULAR</h6>#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#          <div class="bottom row">#}
+{#            <div class="blogs">#}
+{#              <div class="row">#}
+{#                {% for i in Popular_post|slice:"0:2" %}#}
+{#                <article class="col">#}
+{#                  <img src="/media/{{i.fetured_image}}" alt="" style=" aspect-ratio: 16/12; object-fit: cover; "/>#}
+{#                  <div class="d-inline-block">#}
+{#                    <div class="d-inline-block mx-2 link">#}
+{#                      <i class="fa-solid fa-user"></i>#}
+{#                      <span class="ms-2 fs-5 italic">{{i.author}}</span>#}
+{#                    </div>#}
+{##}
+{#                    <div class="d-inline-block mx-2 link">#}
+{#                      <i class="fa-solid fa-calendar-days"></i>#}
+{#                      <span class="ms-2 fs-5 italic">{{i.date}}</span>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <h5>#}
+{#                    <a href="{{i.slug}}" class="link">#}
+{#                      {{i.title|truncatewords:"55"}}#}
+{#                    </a>#}
+{#                  </h5>#}
+{#                </article>{%endfor%}#}
+{##}
+{##}
+{##}
+{##}
+{#              </div>#}
+{#            </div>#}
+{##}
+{#            <div class="article">#}
+{#              {% for i in upcoming_post %}#}
+{#              <span class="italic">Lorem, ipsum dolor.</span>#}
+{#              <h3> <a href="{{i.slug}}">{{i.title}}</a></h3>#}
+{#              <p>#}
+{#                {{i.content|safe|truncatewords:"55" }}#}
+{#              </p>#}
+{#              <div class="d-inline-block">#}
+{#                <i>I</i>#}
+{#                <i>I</i>#}
+{#                <i>I</i>#}
+{#                <i>I</i>#}
+{#                <span class="italic">Share</span>#}
+{#              </div> {%endfor%}#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </section>#}
+
+
+    {% endblock body %}

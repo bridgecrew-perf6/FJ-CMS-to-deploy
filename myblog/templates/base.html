@@ -1,0 +1,527 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}  {% endblock title %} | Foreldrajafnrétti </title>
+    <link rel="shortcut icon" type="image/png" href="/media/assets/images/FJ-logo1-web-small.png">
+
+
+   <link rel="stylesheet" href="/media/swiper/swiper-bundle.min.css" />
+    <link href="/media/styles/bs5/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/media/styles/effect.css" />
+    <link rel="stylesheet" href="/media/styles/index.css" />
+    <link href="/media/styles/fontawesome/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="App">
+      <header class="Header">
+        <div class="container">
+          <section class="top">
+            <div class="d-flex align-items-center justify-content-between p-2">
+               <div class="d-flex">
+                <div class="d-flex align-items-center mx-2">
+                  <i class="fa-solid fa-phone"></i>
+                  <span class="ms-2"> Hafðu samband: 691 8644 </span>
+                </div>
+
+                <div class="d-flex align-items-center mx-2">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span class="ms-2"> [stjorn@foreldrajafnretti.is] </span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <span class="mx-2">Socials</span>
+                <a href='https://www.facebook.com/Foreldrajafnretti/' class="px-2">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href='https://www.youtube.com/c/Foreldrajafnretti' class="px-2">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="middle">
+            <div class="left">
+              <div class="d-inline-block">
+                <i></i>
+                <span class="ms-2"></span>
+              </div>
+
+{##}
+{#Navar bar with logo centered#}
+{##}
+
+
+              <div class="d-inline-block">
+                <a href="/">
+                  <span class="svg_bg active">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                             3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                             10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                             10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                             9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Forsíða
+                  </span>
+                </a>
+
+                <a href="{% url 'blog' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Umsagnir
+                  </span>
+                </a>
+
+                <a href="{% url 'contact' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Skoðun
+                  </span>
+                </a>
+
+                <a href="{% url 'radgjof' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Ráðgjöf
+                  </span>
+                </a>
+              </div>
+              </div>
+
+{##}
+{# LOGO CENTERED IN MENU TO REDIRED TO HOME PAGE #}
+{# LINK ON IMAGE SO NO TEXT HERE AS WELL #}
+{##}
+            <div class="center"><a href="{% url 'home' %}">
+              <img src="/media/assets/images/FJ-logo2-web-small.png" alt="" /> </a>
+            </div>
+
+            <div class="right">
+              <div class="d-inline-block">
+
+                <a href="{% url 'about' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Um félagið
+                  </span>
+                </a>
+                <a href="{% url 'adild' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Aðild
+                  </span>
+
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">
+                      <span class="svg_bg">
+                        <div class="svg_bg-anim">
+                          <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                            <polygon
+                              class="st0"
+                              points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                               3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                            ></polygon>
+                          </svg>
+                          <span class="span"></span>
+                          <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                            <polygon
+                              class="st0"
+                              points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                               10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                               10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                               9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                            ></polygon>
+                          </svg>
+                        </div>
+                        Log out
+                      </span>
+                    </a>
+                    {% else %}
+
+                    <a href="{% url 'login' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Login
+                  </span>
+                </a>
+                     <a href="{% url 'register' %}">
+                  <span class="svg_bg">
+                    <div class="svg_bg-anim">
+                      <svg x="0px" y="0px" viewBox="0 0 14.1 28">
+                        <polygon
+                          class="st0"
+                          points="1.9,0 0,2.3 1.3,4.8 1.6,6.6 2.2,7.7 3.7,9.5 3.2,9.8 3.7,10.9 3.7,11.8 3.4,12.8 2.6,13.7 3.2,14.8
+                           3.7,15.8 3.3,16.5 2.8,17.1 1.5,19.2 2.7,20.5 3.5,23.1 2.7,24.4 1.8,26.4 1.8,26.8 2.5,27.3 3.4,27.5 4.2,28 14.1,28 14.1,0 "
+                        ></polygon>
+                      </svg>
+                      <span class="span"></span>
+                      <svg x="0px" y="0px" viewBox="0 0 11.5 28">
+                        <polygon
+                          class="st0"
+                          points="9.1,0 9.3,1.1 9.7,1.9 9.7,2.3 9.9,2.7 9.9,3.3 10.1,4 10.1,4.7 10.1,5.3 9.6,5.7 9.9,6.3 10.1,6.8
+                           10.7,7.3 10.7,7.6 10.6,7.9 10.7,8.9 10.7,9.5 11.5,10.6 11.2,11 11.5,11.2 10.9,11.8 10.5,12.5 10.7,12.7 11,12.7 11.1,12.9
+                           10.6,14.1 9.9,15 8.2,16.7 8.8,17.2 8.4,18 8.8,18.8 8.7,19.6 8.8,20.5 8.7,20.9 8.7,21.3 9.2,21.8 8.7,22.6 8.8,23 8.8,23.2
+                           9,23.4 8.6,23.7 8.4,24.4 8.4,24.9 7.9,25.2 7.6,26.1 7.9,26.8 8.5,27.6 6.9,28 0,28 0,0 "
+                        ></polygon>
+                      </svg>
+                    </div>
+                    Register
+                  </span>
+                </a>
+                    {% endif %}
+                </a>
+
+              </div>
+
+              <div class="d-inline-block">
+                <span></span>
+                <i></i>
+              </div>
+            </div>
+           </section>
+        </div>
+      </header>
+
+
+
+{##}
+{# for some reasons, if commented the next 10 lines   #}
+{# make the footer disappear on the home page #}
+{# TODO need to check why #}
+{##}
+
+{#     <div class="col-md-8">#}
+{#        {% if messages %}#}
+{#            {% for message in messages %}#}
+{#                <div class="alert alert-{{ message.tags }}">#}
+{#                {{ message }}#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        {% endif %}#}
+{#        </div>#}
+
+{##}
+{#MOBILE HEADER MENU#}
+{##}
+      <header class="Header_mobile">
+        <div class="top">
+          <a href="/" class="h-100">
+            <img src="/media/assets/images/AdminTELogo.png" alt="" />
+          </a>
+          <div
+            class="d-flex align-items-center"
+            onclick="toggleActiveClass('#menu')"
+          >
+{#              MENU MOBILE MINIMALIST#}
+            <span class="me-2"> </span>
+            <svg height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+          </div>
+        </div>
+        <div class="menu p-4" id="menu">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span><a href="{% url 'home' %}">Forsíða</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+            <li class="list-group-item">
+              <span><a href="{% url 'blog' %}">Umsagnir</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+
+            <li class="list-group-item">
+              <span><a href="{% url 'contact' %}">Skoðun</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+            <li class="list-group-item">
+              <span><a href="{% url 'radgjof' %}">Ráðgjöf</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+            <li class="list-group-item">
+              <span><a href="{% url 'about' %}">Um félagið</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+            <li class="list-group-item">
+              <span><a href="{% url 'adild' %}">Aðild</a></span>
+              <svg
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                />
+              </svg>
+            </li>
+
+          </ul>
+        </div>
+      </header>
+
+
+       {% block body %}
+       {% endblock body %}
+
+{##}
+{# FOOTER #}
+{##}
+
+        <footer class="Footer">
+        <div class="container top">
+          <div class="row py-4">
+            <div class="left"><a href="{% url 'home' %}">
+              <img src="/media/assets/images/FJ-logo1-web-small.png" alt="" /></a>
+            </div>
+
+            <div class="right">
+              <p class="italic fs-4 fw-normal">
+                Félagið veitir
+                <span class="spl">foreldrum og börnum</span> í vandræðum símaráðgjöf í málum sem snerta sameiginlegt uppeldishlutverk foreldra.
+              </p>
+            </div>
+          </div>
+
+          <div class="row py-lg-3">
+            <article class="col">
+              <h6>Ertu í vandræðum?</h6>
+              <p>
+                Félag um foreldrajafnrétti hefur um árabil veitt símaráðgjöf í síma +354 891 8644.
+              </p>
+
+              <p>
+                  Foreldrar og börn sem eiga í vandræðum vegna málefna sem snerta foreldrajafnrétti geta sent skrifleg erindi
+                  á stjorn@foreldrajafnretti.is eða haft samband á Facebook síðu félagsins.
+              </p>
+            </article>
+
+            <article class="col">
+              <h6>Nýjast</h6>
+              {% for i in Popular_post|slice:"0:2"%}
+              <div class="d-inline-block">
+
+                <i>I</i>
+
+                <span><a href="{{i.slug}}"> {{i.title|truncatewords:"40"}} </a></span>
+                <span class="italic spl me-2"> <i class="fa-solid fa-calendar-days"></i>{{i.date}} //<i class="fa-solid fa-user"></i> {{i.author}}</span>
+              </div>
+              {%endfor%}
+
+
+            </article>
+
+            <article class="col">
+              <h6>Youtube</h6>
+              <iframe
+                style="height: calc(100% - 48.4px); width: 100%"
+                src="https://www.youtube.com/embed/YQXSAVUNngg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="container">
+            <div class="d-flex justify-content-between py-3">
+              <div class="d-inline-block">
+                <span>Socials</span>
+
+                <a href='https://www.facebook.com/Foreldrajafnretti/' class="px-2">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href='https://www.youtube.com/c/Foreldrajafnretti' class="px-2">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+
+              <span> <a href ="#" target="blank">Foreldrajafnrétti 2022</a></span>
+              <span>Access <a href ='http://127.0.0.1:8000/admin/' target="blank">Administration</a></span>
+{#                TODO link to alvöru admin once deploy#}
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- <script src="./javascript/swiper-bundle.min.js" defer></script> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="/media/swiper/swiper-bundle.min.js"></script>
+    <script src="/media/javascript/index.js" defer></script>
+  </body>
+</html>

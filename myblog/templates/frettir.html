@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %} Fréttir {% endblock title %}
+{% load static %}
+{% block body %}
+  <div class="App">
+{#        <section class="Hero">#}
+{#            <article>#}
+{#              <img#}
+{#                class="background"#}
+{#                src="/media/assets/images/landing-img-16a.jpg"#}
+{#                alt=""#}
+{#              />#}
+{##}
+{#              <div class="container text-start">#}
+{#                <h1>Fréttir</h1>#}
+{#              </div>#}
+{#            </article>#}
+{#            <div class="bottom">#}
+{#              <img src="/media/assets/images/h1-rev-bottom.png" alt="" />#}
+{#            </div>#}
+{#          </section>#}
+
+
+            <section>
+            <article>
+        <div class="container text-start">
+            <h1></h1>
+             <h1></h1>
+          </div>
+        </article>
+      </section>
+
+          <section class="Blog">
+            <div class="container">
+              <article class="row py-3">
+                {% for i in upcoming_post %}
+                <div class="col-9">
+                  <h2>{{i.title |safe}}</h2>
+                  <p>
+                    {{i.content |safe}}
+                  </p>
+
+                  <div class="d-flex justify-content-between py-5 border-bottom">
+                    <div class="d-inline-block">
+                      <div class="d-inline-block me-2 link">
+                        <i>I</i>
+                        <span class="ms-2 fs-5 italic">{{i.author |safe}}</span>
+                      </div>
+
+                      <div class="d-inline-block mx-2 link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="ms-2 fs-5 italic">{{i.date}}</span>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-3 align-items-center">
+                      <div class="addthis_inline_share_toolbox_zjd6"></div>
+
+                      <span class="italic">Share</span>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between py-4">
+                    <div class="d-inline-block">
+                      <img
+                        height="44"
+                        width="86"
+                        src="/media/assets/images/blog-post-img-34.jpg"
+                        alt=""
+                      />
+                      <div class="d-inline-block ms-3">
+                        <i>I</i>
+                        <span class="h">PREVIOUS POST</span>
+                      </div>
+                    </div>
+
+                    <div class="d-inline-block">
+                      <div class="d-inline-block me-3">
+                        <span class="h">NEXT POST</span>
+                        <i>I</i>
+                      </div>
+                      <img
+                        height="44"
+                        width="86"
+                        src="/media/assets/images/blog-post-img-34.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+
+                <div class="col-3">
+                  <div class="position-sticky top-0 h-auto">
+                    <div class="py-3">
+                      <h6>KEY POINTS</h6>
+                      {% for i in key_points %}
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <span class="link italic">{{i.key_title}}</span>
+                          </a>
+                        </li>
+
+                      </ul>
+                      {% endfor %}
+                    </div>
+
+                    <div class="py-3">
+                      <img src="/media/assets/images/sidebar-img.png" alt="" />
+
+                      <a href="./contact.html">
+                        <button class="bg-accent btn_bg mt-4">
+                          <div class="btn_bg-anim">
+                            <span> <a href = 'adild'>Gerast félagið</a></span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                              ></path>
+                            </svg>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-623b115a4e7d966d"></script>
+
+  </div>
+{% endblock body %}

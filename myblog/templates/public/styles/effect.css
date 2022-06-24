@@ -1,0 +1,101 @@
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  line-height: inherit;
+}
+
+.link:hover {
+  background-size: 100% 96%;
+  color: var(--light-accent);
+}
+
+.link:hover * {
+  color: var(--light-accent) !important;
+  transition: color 0.6s ease;
+}
+
+.svg_bg.active {
+  color: var(--light-accent);
+}
+
+.svg_bg:hover,
+.svg_bg:hover * {
+  color: var(--light-accent) !important;
+}
+
+.svg_bg.active .svg_bg-anim,
+.svg_bg:hover .svg_bg-anim {
+  clip-path: inset(0 0 0 0);
+}
+
+.btn_bg:active {
+  transform: scale(0.94);
+}
+
+.btn_bg:hover .btn_bg-anim span {
+  padding-right: 0;
+  padding-left: 1.5rem;
+  opacity: 0.1;
+}
+
+.btn_bg:hover .btn_bg-anim svg:nth-child(3) {
+  left: 100%;
+  transform: rotate(0);
+}
+
+.btn_bg:hover .btn_bg-anim svg:nth-child(2) {
+  transform: translateX(0);
+}
+
+.btn_bg:hover .btn_bg-anim::after {
+  left: 100%;
+}
+
+.prev_btn:hover svg:nth-child(1) image:nth-child(1),
+.next_btn:hover svg:nth-child(1) image:nth-child(1) {
+  opacity: 0;
+}
+
+.prev_btn:hover svg:nth-child(1) image:nth-child(2),
+.next_btn:hover svg:nth-child(1) image:nth-child(2) {
+  opacity: 1;
+}
+
+.prev_btn:hover svg:nth-child(2),
+.next_btn:hover svg:nth-child(2) {
+  fill: var(--dark-primary);
+}
+
+.Header_mobile .menu.active {
+  top: 72px;
+}
+
+.Header_mobile .menu ul li:hover span {
+  color: var(--light-accent) !important;
+}
+
+.Destinations .container article .overlay .svg_bg.active,
+.Destinations .container article .overlay .svg_bg:hover,
+.Destinations .container article .overlay .svg_bg:hover * {
+  cursor: inherit;
+  color: initial !important;
+}
+
+.Destinations .container article .overlay .svg_bg.active p,
+.Destinations .container article .overlay .svg_bg.active .italic {
+  color: var(--light-secondary) !important;
+}
+
+.Destinations_main .container .top .col:hover img:nth-child(3) {
+  opacity: 1 !important;
+}
+
+.Destinations_main .container .top .col:hover img:nth-child(2) {
+  opacity: 0 !important;
+}
+
+.Destinations_main .container .top .col:hover .svg_bg-anim {
+  clip-path: inset(0 0 0 0);
+}

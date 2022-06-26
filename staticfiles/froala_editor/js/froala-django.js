@@ -13,5 +13,3 @@ function getCookie(name) {
   }
   return cookieValue;
 }
-
-new FroalaEditor('.selector', {  attribution: false});

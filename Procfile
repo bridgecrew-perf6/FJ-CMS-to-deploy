@@ -1,1 +1,1 @@
-web: gunicorn fj-cms.wsgi --log-file -
+web: gunicorn myapp.wsgi --log-file -

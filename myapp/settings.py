@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     #'django.contrib.staticfiles',
     'myblog.apps.MyblogConfig',
     'froala_editor',
-    'whitenoise.runserver_nostatic',
+    #'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [

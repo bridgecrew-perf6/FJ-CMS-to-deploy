@@ -1,10 +1,6 @@
-from django.db import models
-
 # Create your models here.
-from django.db import models
 from email import message
 from statistics import mode
-from django.db import models
 from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.utils.text import slugify
@@ -37,8 +33,8 @@ class Post(models.Model):
     alt_tag = models.CharField(max_length=150)
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=50, blank=True)
-    # author_image = models.ImageField(upload_to='Images', blank=True)
-    # author_content = models.CharField(max_length=500, blank=True)
+    author_image = models.ImageField(upload_to='Images', blank=True, default='/AdminTELogo.png')
+    author_content = models.CharField(max_length=500, blank=True, default=' ')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
     content = FroalaField()

@@ -1,4 +1,10 @@
-steps to run the project
+
+==>  project currently deployed on https://fj-cms.herokuapp.com/ 
+
+
+#####################################################################################################
+##############################  steps to run the project on localhost  ##############################
+#####################################################################################################
 
 1-create python virtual enviorment using this command (before runing command make sure you already install python).
 

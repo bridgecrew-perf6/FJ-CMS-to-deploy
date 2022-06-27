@@ -149,6 +149,13 @@ LOGIN_URL='login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+FROALA_EDITOR_OPTIONS = {
+  'key': '4NC5fB4D3D3B3F3C5B4D-13enD4ejF-7B9bnE-11bezqabA1wzF-10kE3D3F3C9A4A4F5G3B2F2==',
+  # other options
+  # ...
+}
+
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
     "site_title": "Foreldrajafnrétti",

@@ -6,32 +6,29 @@
 ##############################  steps to run the project on localhost  ##############################
 #####################################################################################################
 
-1-create python virtual enviorment using this command (before runing command make sure you already install python).
+1- create python virtual enviorment using this command (before, make sure you already have installed python).
 
     virtualenv virtualenvName
 
-2-activate the python Enviroment using this command
+2- activate the python Enviroment using this command
     
     source virtualenv_name/bin/activate   
     
     for more information follow the link for python enviroment https://www.geeksforgeeks.org/python-virtual-environment/
 
-3-after activating virtualenv, go to the project folder name BlogWebsite and run this command
+3- after activating virtualenv, go to the main project folder with manage.py file, and run the following command
 
     pip install -r requirements.txt 
 
-(make sure you are in BlogWebsite folder where exist manage.py file)
-
-4-and than run below command
+4- and than run the following command
 
     python manage.py runserver
 
+5- IF ERROR if statficles do not load properly, run the following command
 
-5-IF ERROR if statficles not load properly run the following command
+    python manage.py collectstatic
 
-python manage.py collectstatic
-
-6-Again run 
+6- Again run 
     python manage.py runserver
 
 

@@ -98,7 +98,7 @@ DATABASES = {
     }
 }
 
-WHITENOISE_USE_FINDERS = True
+#WHITENOISE_USE_FINDERS = True
 
 
 # Password validation
